@@ -32,12 +32,9 @@ class App extends React.Component {
   }
 
   getTastediveData() {
-    axios.get(`https://tastedive.com/api/similar?`, {
+    axios.get(`http://localhost:8080/tastedive`, {
       params: {
-        q: this.state.currentSearchQuery,
-        info: 1,
-        limit: 5,
-        k: tastediveApiKey
+        searchTerms: this.state.currentSearchQuery
       }
     })
     .then((result) => {
