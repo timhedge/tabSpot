@@ -1,9 +1,16 @@
 import Search from './search.js';
+import List from './list.js';
+import tastediveApiKey from '../apiKeys/tastediveApiKey.js';
+import axios from 'axios';
 
 class App extends React.Component {
   state = {
     currentText: '',
-    currentSearchQuery: ''
+    currentSearchQuery: '',
+    tabsSearchResults: [{ songName: 'song1' }, { songName: 'song2' }],
+    suggestionsResults: [{ artistName: 'artist1' }, { artistName: 'artist2' }],
+    tabsList: true,
+    suggestionsList: true
   }
 
   handleChange = this.handleChange.bind(this);
@@ -19,13 +26,34 @@ class App extends React.Component {
   handleSearchClick() {
     this.setState({
       currentSearchQuery: this.state.currentText
+    }, () => {
+      this.getTastediveData();
     });
+  }
+
+  getTastediveData() {
+    axios.get(`https://tastedive.com/api/similar?`, {
+      params: {
+        q: this.state.currentSearchQuery,
+        info: 1,
+        limit: 5,
+        k: tastediveApiKey
+      }
+    })
+    .then((result) => {
+      console.log(result.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
   }
 
   render() {
     return (
       <div>
         <Search handleChange={this.handleChange} handleSearchClick={this.handleSearchClick}/>
+        <List tabsList={this.state.tabsList} tabsSearchResults={this.state.tabsSearchResults}/>
+        <List suggestionsList={this.state.suggestionsList} suggestionsResults={this.state.suggestionsResults}/>
       </div>
     )
   }
