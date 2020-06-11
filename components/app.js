@@ -38,7 +38,9 @@ class App extends React.Component {
       }
     })
     .then((result) => {
-      console.log(result.data);
+      this.setState({
+        suggestionsResults: [...result.data.Similar.Results]
+      });
     })
     .catch((error) => {
       console.log(error);

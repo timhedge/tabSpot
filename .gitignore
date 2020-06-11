@@ -1,5 +1,3 @@
 node_modules
 apiKeys/tastediveApiKey.js
 .next
-# Local Netlify folder
-.netlify
