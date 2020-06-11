@@ -20,10 +20,24 @@ app.get(`/tastedive`, (req, res) => {
   })
   .then((result) => {
     res.send(result.data);
-    console.log(result.data);
   })
   .catch((error) => {
     console.log(error);
   })
-})
+});
+
+app.get(`/songsterr`, (req, res) => {
+  console.log(req.query)
+  axios.get(`http://www.songsterr.com/a/ra/songs.json?`, {
+    params: {
+      pattern: req.query.searchTerms
+    }
+  })
+  .then((result) => {
+    res.send(result.data);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+});
 

@@ -27,11 +27,11 @@ class App extends React.Component {
     this.setState({
       currentSearchQuery: this.state.currentText
     }, () => {
-      this.getTastediveData();
+      this.getSearchData();
     });
   }
 
-  getTastediveData() {
+  getSearchData() {
     axios.get(`http://localhost:8080/tastedive`, {
       params: {
         searchTerms: this.state.currentSearchQuery
@@ -41,6 +41,18 @@ class App extends React.Component {
       this.setState({
         suggestionsResults: [...result.data.Similar.Results]
       });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+    axios.get(`http://localhost:8080/songsterr`, {
+      params: {
+        searchTerms: this.state.currentSearchQuery
+      }
+    })
+    .then((result) => {
+      console.log(result.data);
     })
     .catch((error) => {
       console.log(error);
