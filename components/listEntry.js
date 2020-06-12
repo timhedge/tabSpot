@@ -3,7 +3,7 @@ const ListEntry = (props) => {
     return (
       <>
         {props.entries.map(entry =>
-            <li>{entry.Name}</li>
+            <li onClick={props.handleArtistClick}>{entry.Name}</li>
         )}
       </>
     )

@@ -7,14 +7,15 @@ class App extends React.Component {
   state = {
     currentText: '',
     currentSearchQuery: '',
-    tabsSearchResults: [{ songName: 'song1' }, { songName: 'song2' }],
-    suggestionsResults: [{ artistName: 'artist1' }, { artistName: 'artist2' }],
+    tabsSearchResults: [],
+    suggestionsResults: [],
     tabsList: true,
     suggestionsList: true
   }
 
   handleChange = this.handleChange.bind(this);
   handleSearchClick = this.handleSearchClick.bind(this);
+  handleArtistClick = this.handleArtistClick.bind(this);
 
   handleChange(event) {
     let text = event.target.value;
@@ -26,6 +27,15 @@ class App extends React.Component {
   handleSearchClick() {
     this.setState({
       currentSearchQuery: this.state.currentText
+    }, () => {
+      this.getSearchData(this.state.currentSearchQuery);
+    });
+  }
+
+  handleArtistClick(event) {
+    let artistName = event.target.innerHTML;
+    this.setState({
+      currentSearchQuery: artistName
     }, () => {
       this.getSearchData(this.state.currentSearchQuery);
     });
@@ -73,7 +83,7 @@ class App extends React.Component {
       <div>
         <Search handleChange={this.handleChange} handleSearchClick={this.handleSearchClick}/>
         <List tabsList={this.state.tabsList} tabsSearchResults={this.state.tabsSearchResults}/>
-        <List suggestionsList={this.state.suggestionsList} suggestionsResults={this.state.suggestionsResults}/>
+        <List suggestionsList={this.state.suggestionsList} suggestionsResults={this.state.suggestionsResults} handleArtistClick={this.handleArtistClick}/>
       </div>
     )
   }
