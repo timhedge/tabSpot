@@ -4,7 +4,7 @@ const List = (props) => {
   return (
     <div>
       <ul>
-        <ListEntry entries={props.tabsList ? props.tabsSearchResults : props.suggestionsResults}/>
+        <ListEntry entryType={props.tabsList ? 'tabs' : 'artist'} entries={props.tabsList ? props.tabsSearchResults : props.suggestionsResults}/>
       </ul>
     </div>
   )
