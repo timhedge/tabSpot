@@ -1,11 +1,18 @@
+import Head from 'next/head';
 import App from '../components/app.js';
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>tabSpot</h1>
-      <App />
-    </div>
+    <>
+      <Head>
+        <script src="https://kit.fontawesome.com/3ce7718940.js" crossorigin="anonymous"></script>
+      </Head>
+      <div>
+        <h1>TabSpot<i className="fas fa-guitar blueGuitar"></i></h1>
+        <App />
+      </div>
+      <footer>Suggested artists powered by <a href="https://tastedive.com/" target="_blank">TasteDive&trade;</a></footer>
+    </>
   )
 }
 

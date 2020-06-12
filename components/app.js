@@ -82,7 +82,7 @@ class App extends React.Component {
     return (
       <div>
         <Search handleChange={this.handleChange} handleSearchClick={this.handleSearchClick}/>
-        <h5 className={this.state.currentSearchQuery === '' ? "hide" : ""}>Tabs for {this.state.currentSearchQuery}</h5>
+        <h4>{this.state.currentSearchQuery === '' ? "Welcome! Search for an artist to view guitar tabs and similar artists" : `Tabs for ${this.state.currentSearchQuery}`}</h4>
         <List tabsList={this.state.tabsList} tabsSearchResults={this.state.tabsSearchResults}/>
         <h4 className={this.state.currentSearchQuery === '' ? "hide" : ""}>Artists you may like</h4>
         <List suggestionsList={this.state.suggestionsList} suggestionsResults={this.state.suggestionsResults} handleArtistClick={this.handleArtistClick}/>
