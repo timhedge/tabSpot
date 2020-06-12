@@ -11,7 +11,7 @@ const ListEntry = (props) => {
     return (
       <>
         {props.entries.map(entry =>
-            <li><a href={`http://www.songsterr.com/a/wa/song?id=${entry.id}`} target="_blank">{entry.title} Click to view tabs on Songsterr</a></li>
+            <li><a href={`http://www.songsterr.com/a/wa/song?id=${entry.id}`} target="_blank">{entry.title} <span className="reveal">Click to view tabs on Songsterr</span></a></li>
         )}
       </>
     )

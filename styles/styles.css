@@ -1,0 +1,11 @@
+.hide {
+  display: none;
+}
+
+.reveal {
+  visibility: hidden;
+}
+
+ul li a:hover span.reveal {
+  visibility: visible;
+}

@@ -9,7 +9,6 @@ app.use(cors());
 app.listen(port, () => console.log(`tabspot app listening at http://localhost:${port}`));
 
 app.get(`/tastedive`, (req, res) => {
-  console.log(req.query)
   axios.get(`https://tastedive.com/api/similar?`, {
     params: {
       q: req.query.searchTerms,
@@ -27,7 +26,6 @@ app.get(`/tastedive`, (req, res) => {
 });
 
 app.get(`/songsterr`, (req, res) => {
-  console.log(req.query)
   axios.get(`http://www.songsterr.com/a/ra/songs.json?`, {
     params: {
       pattern: req.query.searchTerms
