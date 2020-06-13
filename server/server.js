@@ -1,9 +1,11 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const app = express();
 const port = 8080;
 const cors = require('cors');
 const axios = require('axios');
-const tastediveApiKey = require('../apiKeys/tastediveApiKey.js');
+
+dotenv.config();
 
 app.use(cors());
 app.listen(port, () => console.log(`tabspot app listening at http://localhost:${port}`));
@@ -17,7 +19,7 @@ app.get(`/tastedive`, (req, res) => {
         q: req.query.searchTerms,
         info: 1,
         limit: 5,
-        k: tastediveApiKey.tastediveApiKey
+        k: process.env.tastediveApiKey
       }
     })
     .then((result) => {
