@@ -4,7 +4,7 @@ TabSpot is a web application that provides musicians links to guitar, bass, and 
 My goals for this small project were to connect at least 2 APIs through a single application, demonstrate my abilities with React and Javascript, and learn and implement a technology I had not used before (Next.js). The MVP features I implemented for this project are listed below in User Stories, and the features I would like to implement next are listed below in Next Steps. Additionally, I would like to continue to review and refactor the existing codebase to maintain and improve readability, conciseness, and performance.  I would also be interested in refactoring the front end to be more mobile-friendly.
 
 ## Demo
-![Imgur](https://i.imgur.com/sVO0Rsc.gif)
+![Desktop](https://i.imgur.com/sVO0Rsc.gif)
 
 ## User Stories
 - As a user, I want to be able to enter an artist's name as search criteria
