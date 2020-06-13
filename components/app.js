@@ -46,7 +46,7 @@ class App extends React.Component {
   }
 
   getTastediveData(q) {
-    axios.get(`http://localhost:8080/tastedive`, {
+    axios.get('https://tab-spot.timhedge.vercel.app/tastedive', {
       params: {
         searchTerms: q
       }
@@ -62,7 +62,7 @@ class App extends React.Component {
   }
 
   getSongsterrData(q) {
-    axios.get(`http://localhost:8080/songsterr`, {
+    axios.get('https://tab-spot.timhedge.vercel.app/songsterr', {
       params: {
         searchTerms: q
       }

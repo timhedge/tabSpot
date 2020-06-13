@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next && npx nodemon server/server.js",
+    "dev": "next & npx nodemon server/server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "node server/server.js & next start"
   },
   "author": "",
   "license": "ISC",
