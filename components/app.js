@@ -1,6 +1,5 @@
 import Search from './search.js';
 import List from './list.js';
-import tastediveApiKey from '../apiKeys/tastediveApiKey.js';
 import axios from 'axios';
 
 class App extends React.Component {
