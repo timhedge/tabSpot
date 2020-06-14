@@ -24,6 +24,7 @@ class App extends React.Component {
   }
 
   handleSearchClick() {
+    event.preventDefault();
     this.setState({
       currentSearchQuery: this.state.currentText
     }, () => {
