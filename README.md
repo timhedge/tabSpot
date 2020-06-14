@@ -38,6 +38,5 @@ My goals for this small project were to connect at least 2 APIs through a single
   </tr>
   <tr>
     <td align="center"><img src="https://camo.githubusercontent.com/3125421b59f34245dbc184aa00ce8491938631d3/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f7a6569742d696e632f696d6167652f75706c6f61642f66726f6e742f6c6f676f732f6e6578742d626c61636b2e706e67" alt="nextjs" title="nextjs" width="90px"></td>
-    <td align="center"><img src="https://buttercms.com/static/images/tech_banners/ExpressJS.png" alt="Express" title="Express" width="75px" height="20px"></td>
   </tr>
 </table>
