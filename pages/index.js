@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <>
       <Head>
-        <script src="https://kit.fontawesome.com/3ce7718940.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/3ce7718940.js" crossOrigin="anonymous"></script>
       </Head>
       <div>
         <h1>TabSpot<i className="fas fa-guitar blueGuitar"></i></h1>

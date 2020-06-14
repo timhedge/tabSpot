@@ -2,3 +2,4 @@ node_modules
 apiKeys/tastediveApiKey.js
 .next
 .env
+*.log
