@@ -1,7 +1,7 @@
 # TabSpot
 TabSpot is a web application that provides musicians links to guitar, bass, and drum tablature and suggests similar artists based on search criteria to help musicians expand their repetoire. The application currently utilizes the Songsterr API to obtain direct links to tablature on the Songsterr website, and uses the TasteDive API to obtain a list of similar artists based on the user's search criteria.
 
-My goals for this small project were to connect at least 2 APIs through a single application, demonstrate my abilities with React and Javascript, and learn and implement a technology I had not used before (Next.js). The MVP features I implemented for this project are listed below in User Stories, and the features I would like to implement next are listed below in Next Steps. I would also be interested in refactoring the front end to be more mobile-friendly as well as digging deeper into Next.js to take full advantage of its capabilities (ie serverless functions). Additionally, I would like to continue to review and refactor the existing codebase to maintain and improve readability, conciseness, and performance.
+My goals for this small project were to connect at least 2 APIs through a single application, demonstrate my abilities with React and Javascript, and learn and implement a technology I had not used before (Next.js). I found that many features of Next.js greatly improve and streamline the process of creating and deploying a React app, including eliminating boilerplate like Webpack configuration, eliminating the need for a server via serverless functions, and ease of deployment through services like Vercel. The MVP features I implemented for this project are listed below in User Stories, and the features I would like to implement next are listed below in Next Steps. I would also be interested in refactoring the front end to be more mobile-friendly as well as implement some logic for handling typos and/or invalid search terms. Additionally, I would like to continue to review and refactor the existing codebase to maintain and improve readability, conciseness, and performance.
 
 ## Demo
 ![Desktop](https://i.imgur.com/UmPSDl4.gif)
@@ -28,13 +28,13 @@ My goals for this small project were to connect at least 2 APIs through a single
   </tr>
   <tr>
     <td align="center">Front-end</td>
-    <td align="center">Back-end</td>
     <td align="center">HTTP Client</td>
+    <td align="center">Deployment</td>
   </tr>
   <tr>
     <td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" alt="React" title="React" width="80px"></td>
-    <td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" alt="Node.js" title="Node.js" width="60px"></td>
     <td align="center"><img src="https://user-images.githubusercontent.com/8939680/57233884-20344080-6fe5-11e9-8df3-0df1282e1574.png" alt="Axios" title="Axios" width="60px"></td>
+    <td align="center"><img src="https://www.finsmes.com/wp-content/uploads/2020/04/vercel.png" alt="Vercel" width="80px">
   </tr>
   <tr>
     <td align="center"><img src="https://camo.githubusercontent.com/3125421b59f34245dbc184aa00ce8491938631d3/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f7a6569742d696e632f696d6167652f75706c6f61642f66726f6e742f6c6f676f732f6e6578742d626c61636b2e706e67" alt="nextjs" title="nextjs" width="90px"></td>
